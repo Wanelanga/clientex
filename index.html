@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tech Store MJ - Catálogo</title>
+  <meta name="description" content="Catálogo online de telemóveis, computadores e acessórios - Tech Store MJ">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MJ</div>
+        <div>
+          <h1>Tech Store MJ</h1>
+          <p class="lead">Telemóveis, computadores e acessórios - Maputo</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#produtos" class="cta">Ver Produtos</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Catálogo de Produtos — Telemóveis & Computadores</h2>
+        <p class="lead">Produtos originais, preços competitivos e atendimento por WhatsApp. Encontra aqui telemóveis, laptops e acessórios organizados por categoria para facilitar as tuas compras.</p>
+        <div class="categories">
+          <div class="chip">Telemóveis</div>
+          <div class="chip">Computadores</div>
+          <div class="chip">Acessórios</div>
+          <div class="chip">Promoções</div>
+        </div>
+        <a class="cta" href="#produtos">Ver catálogo</a>
+      </div>
+      <div style="max-width:360px;text-align:right">
+        <img src="img/hero.svg" alt="imagem" style="width:100%;border-radius:12px;">
+      </div>
+    </section>
+
+    <main id="produtos">
+      <h3 style="margin-top:26px">Telemóveis</h3>
+      <div class="grid" id="products-grid"></div>
+
+      <h3 style="margin-top:26px">Computadores</h3>
+      <div class="grid" id="computers-grid"></div>
+
+      <h3 style="margin-top:26px">Acessórios</h3>
+      <div class="grid" id="accessories-grid"></div>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Tech Store MJ</strong>
+        <div class="contact"><small>Atendimento por WhatsApp: +258 84 000 0000</small></div>
+      </div>
+      <div>
+        <small>Localização: Maputo • Entregas em todo o país</small>
+      </div>
+    </footer>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/258877971232?text=Olá%20gostaria%20de%20mais%20informações" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop" onclick="hideModal(event)">
+    <div class="modal" role="dialog" aria-modal="true" onclick="event.stopPropagation()">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px">
+        <h4 id="modalTitle">Produto</h4>
+        <a href="#" class="close" onclick="hideModal(event)">Fechar</a>
+      </div>
+      <div id="modalBody"></div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a id="modalWhatsapp" class="btn btn-whatsapp" href="#" target="_blank">Contactar pelo WhatsApp</a>
+        <a id="modalPedido" class="btn btn-outline" href="#">Pedir</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
